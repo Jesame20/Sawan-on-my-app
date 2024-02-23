@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>HTML Calculator</title> 
+  
+    <!-- For styling -->
+    <style> 
+        table { 
+            border: 1px solid black; 
+            margin-left: auto; 
+            margin-right: auto; 
+        } 
+          
+        input[type="button"] { 
+            width: 100%; 
+            padding: 20px 40px; 
+            background-color: rgb(196, 59, 9); 
+            color: white; 
+            font-size: 24px; 
+            font-weight: bold; 
+            border: none; 
+            border-radius: 5px; 
+        } 
+          
+        input[type="text"] { 
+            padding: 20px 30px; 
+            font-size: 24px; 
+            font-weight: bold; 
+            border: none; 
+            border-radius: 5px; 
+            border: 2px solid black; 
+        } 
+    </style> 
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head> 
+<body> 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Sawan-on's App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            <!-- Search form -->
+            <form class="form-inline my-2 my-lg-0 ml-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+  
+    <!-- Create table -->
+    <table id="calcu"> 
+        <tr> 
+            <td colspan="4"> 
+                <input type="text" id="result" readonly> 
+            </td> 
+        </tr> 
+  
+        <tr> 
+            <td><input type="button" value="1" onclick="appendToResult('1')"></td> 
+            <td><input type="button" value="2" onclick="appendToResult('2')"></td> 
+            <td><input type="button" value="3" onclick="appendToResult('3')"></td> 
+            <td><input type="button" value="/" onclick="appendToResult('/')"></td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="4" onclick="appendToResult('4')"></td> 
+            <td><input type="button" value="5" onclick="appendToResult('5')"></td> 
+            <td><input type="button" value="6" onclick="appendToResult('6')"></td> 
+            <td><input type="button" value="*" onclick="appendToResult('*')"></td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="7" onclick="appendToResult('7')"></td> 
+            <td><input type="button" value="8" onclick="appendToResult('8')"></td> 
+            <td><input type="button" value="9" onclick="appendToResult('9')"></td> 
+            <td><input type="button" value="-" onclick="appendToResult('-')"></td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="0" onclick="appendToResult('0')"></td> 
+            <td><input type="button" value="." onclick="appendToResult('.')"></td> 
+            <td><input type="button" value="=" onclick="calculate()"></td> 
+            <td><input type="button" value="+" onclick="appendToResult('+')"></td> 
+        </tr> 
+        <tr>
+            <td colspan="4"><input type="button" value="C" onclick="clearResult()"></td> 
+        </tr>
+    </table> 
+
+    <!-- Include calculator.js -->
+    <script src="calculator.js"></script>
+</body> 
+  
+</html> 
