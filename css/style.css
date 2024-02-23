@@ -24,7 +24,7 @@
             border-radius: 5px; 
             border: 2px solid black; 
         } 
-/* CSS code for todo-list.html */ 
+        /* CSS code for todo-list.html */ 
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -62,9 +62,9 @@ body {
   background-color: #007bff;
   border: none;
   border-radius: 0 5px 5px 0;
-  color: #fff;
+  color: #c11c1c;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 40px;
 }
 
 .todo-list {
@@ -75,7 +75,7 @@ body {
 .todo-item {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
   border-bottom: 1px solid #eee;
 }
 
@@ -95,5 +95,5 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-left: 10px; /* Added margin-left */
 }
-
